@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #1d1d1d;
+        }
+
+        .mainPerson {
+            stroke: rgb(29, 29, 29);
+            stroke-width: 6;
+        }
+
+        .movement {
+            cursor: pointer
+        }
+
+        text {
+            font-size: 15px;
+        }
+    </style>
+    <script src="script/jquery-1.11.1.js"></script>
+    <script src="script/d3.js"></script>
+    <script src="script/initGx.js"></script>
+</head>
+
+<body>
+    <!-- <svg>
+    <defs>
+        <pattern id="avatar" width="100%" height="100%" patternContentUnits="objectBoundingBox">
+            <image width="1" height="1" xlink:href="image/1.gif" />
+        </pattern>
+    </defs>
+
+    <g>
+        <line class="aaa" x1="100" y1="80" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <animateTransform attributeName="transform" type="rotate" from="0,100,80" to="360,100,80" dur="10s" repeatCount="indefinite" />
+    </g>
+    <circle cx="100" cy="80" r="50" fill="url(#avatar)" />
+</svg> -->
+    <script>
+        let mainBody = $("body");
+        let gxJson = {
+            main: {
+                id: "main",
+                sfzh: "340221199911111234",
+                name: "丁老大",
+                src: "image/1.jpg",
+            },
+            gx: [{
+                    id: "gxone",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/2.jpg",
+                    qz: true
+                },
+                {
+                    id: "gx2",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/3.jpg"
+                },
+                {
+                    id: "gx3",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/4.jpg",
+                    qz: true
+                },
+                {
+                    id: "gx4",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/5.jpg"
+                },
+                {
+                    id: "gx5",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/6.jpg",
+                    qz: true
+                },
+                {
+                    id: "gx6",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/7.jpg",
+                    qz: true
+                },
+                {
+                    id: "gx7",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/8.jpg",
+                },
+                {
+                    id: "gx8",
+                    gxmc: "夫妻",
+                    sfzh: "340221199911223344",
+                    name: "丁老太",
+                    src: "image/9.jpg",
+                }
+            ]
+        };
+
+        /**
+         * 定义全局变量
+         * cx：原点
+         * cy：原点
+         * r：中心圆半径
+         * r2：直线长度
+         * r3：外圈圆半径
+         * data：数据
+         */
+        let initJson = {
+            width: mainBody.width(),
+            height: mainBody.height(),
+            r: 50,
+            r2: 150,
+            qzr2: 220,
+            r3: 36,
+            date: gxJson
+        }
+        new InitGx(initJson).init();
+    </script>
+</body>
+
+</html>
